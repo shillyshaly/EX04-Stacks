@@ -5,8 +5,8 @@
 #include <string>
 #include <iostream>
 
-//#include "balanced.h"
-#include "../include/balanced.h"
+#include "balanced.h"
+//#include "../include/balanced.h"
 
 using edu::vcccd::vc::csv15::balanced_parens;
 using edu::vcccd::vc::csv15::balanced_curly;

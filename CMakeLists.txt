@@ -6,7 +6,7 @@ project (EX04-Stacks)
 set(SOURCE_PREFIX "stacks")
 set(EXEC_NAME "Stacks")
 set(CMAKE_CXX_STANDARD 11)
-add_executable(EX04-Stacks include/balanced.h include/stack.h src/balanced.cc src/main.cc )
+#add_executable(EX04-Stacks include/balanced.h include/stack.h src/balanced.cc src/main.cc )
 
 if(EXISTS ${CMAKE_HOME_DIRECTORY}/csv15-lib/CMakeLists.txt)
     include(csv15-lib/CMakeLists.txt)
