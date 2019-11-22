@@ -12,7 +12,41 @@ namespace edu { namespace vcccd { namespace vc { namespace csv15 {
     template <char Open, char Close>
     struct Balancer {
         bool operator ()(const std::string &code) {
-            // Put your code below
+            stack<char> s;
+            char ch;
+            for(int i = 0; i < code.length(); i++){
+                if(code[i] == '(' || code[i] == '{' || code[i] == '[' || code[i] == '<'){
+                    s.push(code[i]);
+                }
+                if(s.empty()){
+                    return false;
+                }else if(code[i] == ')') {
+                    ch = s.top();
+                    s.pop();
+                    if(ch == '}' || code[i] == ']' || code[i] == '>'){
+                        return false;
+                    }
+                }else if(code[i] == '}') {
+                    ch = s.top();
+                    s.pop();
+                    if(ch == ')' || code[i] == ']' || code[i] == '>'){
+                        return false;
+                    }
+                }else if(code[i] == ']') {
+                    ch = s.top();
+                    s.pop();
+                    if(ch == '}' || code[i] == ')' || code[i] == '>'){
+                        return false;
+                    }
+                }else if(code[i] == '>') {
+                    ch = s.top();
+                    s.pop();
+                    if(ch == '}' || code[i] == ']' || code[i] == ')'){
+                        return false;
+                    }
+                }
+                return (s.empty());
+            }
         }
     };
 

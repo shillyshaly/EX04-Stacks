@@ -39,8 +39,8 @@
 #include <chrono>
 #include <iostream>
 
-#include "stack.h"
-#include "balanced.h"
+#include "../include/stack.h"
+#include "../include/balanced.h"
 
 #include "gtest/gtest.h"
 #include "GTestNoDeath.h"
