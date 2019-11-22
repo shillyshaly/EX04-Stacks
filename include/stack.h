@@ -27,7 +27,7 @@ namespace edu { namespace vcccd { namespace vc { namespace csv15 {
         // Fill in your code below
         bool empty() const { (!_stack.empty()) ? false : true; }
         size_t size() const { return _stack.size(); }
-        const Ty &top() const { return _stack[0]; }
+        const Ty &top() const { return _stack.front(); }
         void push(const Ty &val) { _stack.push_front(val); }
         void pop() { _stack.pop_front(); }
     };
